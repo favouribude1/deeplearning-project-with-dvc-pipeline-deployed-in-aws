@@ -3,7 +3,11 @@ from objectClassifier import logger
 #logger.info("welocme to my custom log")
 
 from objectClassifier.pipeline.stage_01_data_ingestion import DataIngestionTrainingPipeline
+from objectClassifier.pipeline.stage_02_prepare_base_model import PrepareBaseModelTrainingPipeline
 
+
+
+# 01-data-ingestion
 
 STAGE_NAME = "Data Ingestion stage"
 try:
@@ -14,3 +18,22 @@ try:
 except Exception as e:
     logger.exception(e)
     raise e
+
+
+# 02-prepare-base-model
+
+STAGE_NAME = "prepare base model stage"
+
+try:
+    logger.info(f">>>>>> stage {STAGE_NAME} started <<<<<<")
+    obj = PrepareBaseModelTrainingPipeline()
+    obj.main()
+    logger.info(f">>>>>> stage {STAGE_NAME} completed <<<<<<\n\nx==========x")
+except Exception as e:
+    logger.exception(e)
+    raise e
+
+
+
+
+# 03-

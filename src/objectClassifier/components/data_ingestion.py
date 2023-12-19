@@ -3,8 +3,9 @@ import urllib.request as request
 import zipfile
 from objectClassifier import logger
 from objectClassifier.utils.common import get_size
-from objectClassifier.entity.config_entity import DataIngestionConfig
 from pathlib import Path
+
+from objectClassifier.entity.config_entity import DataIngestionConfig
 
 
 
