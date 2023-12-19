@@ -160,3 +160,7 @@ cython_debug/
 #  option (not recommended) you can uncomment the following to ignore the entire idea folder.
 #.idea/
 
+#to ignore everything in side the artifacts folder, because we dont want to push the data/images
+#to github because of the size.
+
+artifacts/*
