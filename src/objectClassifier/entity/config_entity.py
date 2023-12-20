@@ -29,3 +29,14 @@ class PrepareBaseModelConfig:
     params_weights: str
     params_classes: int
 
+
+#03-prepare-callbacks
+    
+@dataclass(frozen=True)
+class PrepareCallbacksConfig:
+    root_dir: Path
+    tensorboard_root_log_dir: Path
+    checkpoint_model_filepath: Path
+
+
+# 04 - training
